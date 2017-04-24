@@ -44,11 +44,13 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
+#   production:g
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: tasklist_production
-  username: tasklist
-  password: <%= ENV['TASKLIST_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: message-board_production
+  username: message-board
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
